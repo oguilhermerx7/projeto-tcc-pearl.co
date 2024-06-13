@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#ffffff;
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.imagem-formulario {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3C5C62;
+    padding: 1rem;
+}
+
+.imagem-formulario img {
+    width: 100%;
+    max-width: 31rem;
+}
+
+.formulario {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3D665E;
+    padding: 3rem;
+}
+
+.header-formulario {
+    width: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-formulario h1 {
+    position: relative;
+    color: #fff;
+}
+
+.titulo-formulario h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #ffffff;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+}
+
+.botao-login a {
+    display: block;
+    border: none;
+    background-color: #427360;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.botao-login a:hover {
+    background-color: #1f362d;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffffc0;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0808081c;
+}
+
+.input-box:hover {
+    background-color: #81818128;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #000000;
+}
+
+.input-box input::placeholder {
+    color: #000000;
+}
+
+.inputs-genero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-genero {
+    margin-bottom: 0.5rem;
+    font-size: 50px;
+    padding: 0 0 5px;
+    color: #fff;
+}
+
+.grupo-inputs-genero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-genero {
+    display: flex;
+    align-items: center;
+}
+
+.input-genero input {
+    margin-right: 0.35rem;
+    color: #fff;
+}
+
+.input-genero label {
+    font-size: 0.91rem;
+    font-weight: 700;
+    color: #000000c0;
+}
+
+.botao-cadastro {
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.botao-cadastro button {
+    width: 100%;
+    border: none;
+    background-color: #427360;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.botao-cadastro button:hover {
+    background-color: #1f362d;
+}
+
+.botao-continuar {
+    margin-top: 1.5rem;
+}
+
+.button-link {
+    display: block;
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #49637B;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button-link:hover {
+    background-color: #2d3d4d;
+}
+
+@media screen and (max-width: 1330px) {
+    .imagem-formulario {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .formulario {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto; 
+    }
+    .inputs {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem; 
+        padding-right: 5rem; 
+    }
+    .input-genero {
+        margin-top: 2rem; 
+    }
+    .grupo-inputs-genero {
+        flex-direction: column; 
+    }
+    .input-genero {
+        margin-top: 0.5rem;
+    }
+}
+.slider {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/0.56;
+    margin: 0 auto;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* SE QUISER UMA TRANSIÇÃO SEM O FADE, REMOVA ESSAS LINHAS ABAIXO */
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+    left: 1px;
+}
+.next {
+    right: 1px;
+}
+
+.dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -80px;
+    padding: 0 10px;
+}
+
+.dot {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid transparent;
+}
+
+.dot img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+}
+
+.dot:hover {
+    opacity: 0.5;
+}
+.active, .active:hover {
+    border: 1px solid #fff;
+    opacity:1;
+}
