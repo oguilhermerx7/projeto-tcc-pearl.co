@@ -1,0 +1,260 @@
+/*FONTES GOOGLE*/
+.montserrat-uniquifier {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .prompt-light {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .prompt-black {
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  .shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /*FIM - FONTES*/
+  /*RESET CSS*/
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /* FIM RESET */
+  
+  main {
+    background: rgb(36, 35, 35);
+    height: 92vh;
+    min-height: calc(
+      100vh - 8vh
+    ); /* Calcula a altura mínima da janela de visualização menos a altura da barra de navegação */
+  }
+  /* ESTILO HEADER */
+  .header-logo {
+    /*
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-style: italic;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 45px
+      */
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #525151;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  .input-pesquisa {
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.2;
+  }
+  .input-enviar {
+    font-size: 20px;
+    transition: 0.2;
+  }
+  /* FIM - HEADER */
+  
+  /* PRODUTOS */
+  
+  .produtos {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    color: white;
+  }
+  
+  .produto {
+    flex-basis: 24%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  h1 {
+    font-family: "Prompt", sans-serif;
+    font-style: normal;
+    color: black;
+  }
+  .card-titulo-produto {
+    font-family: "Prompt", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .card-valor-produto {
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .card-imagem {
+    max-width: 200px;
+    max-height: 200px;
+    background: rgb(199, 199, 199);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-botao-redireciona {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #1e90ff;
+  }
+  
+  .fundo-produtos {
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(214, 214, 214);
+  }
+  
+  /* FIM - PRODUTOS */
+  
+  /* FOOTER */
+  footer {
+    background-color: #525151;
+  }
+  footer .container {
+    display: flex;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  footer .container ul {
+    width: 25%;
+  }
+  footer .container h2 {
+    color: white;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  footer .container h3 {
+    color: white;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  footer .icon-redessociais img {
+    margin: 10px 0;
+    width: 30px;
+    height: auto;
+  }
+  
+  footer .container ul > p {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  footer .container li {
+    margin: 10px 0;
+  }
+  footer .container a {
+    color: white;
+  }
+  /* END - FOOTER */
+  
+  /* RESPONSIVIDADE */
+  /* Estilos para telas pequenas (até 600px de largura) */
+  @media only screen and (max-width: 600px) {
+    .header-logo {
+      font-size: 30px; /* Reduzir o tamanho da fonte do logo */
+    }
+  
+    nav {
+      flex-direction: column; /* Colocar os itens da navegação em coluna */
+    }
+  
+    .nav-list {
+      position: static; /* Mudar a posição da lista de navegação para o fluxo normal */
+      width: 100%; /* Definir a largura da lista de navegação para ocupar toda a largura */
+    }
+  
+    .nav-list li {
+      margin: 10px 0; /* Adicionar espaço entre os itens da lista */
+      text-align: center; /* Centralizar o texto dos itens da lista */
+    }
+  
+    .produto {
+      grid-template-columns: 1fr; /* Mudar para uma única coluna na exibição de produtos */
+    }
+  
+    .fundo-produtos {
+      margin-bottom: 20px; /* Adicionar espaço entre os produtos */
+    }
+  }
+  
+  /* Estilos para telas médias (de 601px a 999px de largura) */
+  @media only screen and (min-width: 601px) and (max-width: 999px) {
+    .header-logo {
+      font-size: 35px; /* Ajustar o tamanho da fonte do logo */
+    }
+  
+    .nav-list li {
+      margin-left: 20px; /* Ajustar a margem dos itens da lista */
+    }
+  }
+  
+  /* Estilos para telas grandes (acima de 1000px de largura) */
+  @media only screen and (min-width: 1000px) {
+    .header-logo {
+      font-size: 45px; /* Restaurar o tamanho original da fonte do logo */
+    }
+  
+    .nav-list li {
+      margin-left: 32px; /* Restaurar a margem original dos itens da lista */
+    }
+  }
+  
+  /* FIM */
+  
